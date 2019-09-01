@@ -43,7 +43,7 @@ If no parameter (ID or place_id) is specified, the API retruns all available res
 
 #### 4. Delete results by ID or place_id
 
-Base endpoint URL: Delete :  `localhost:8000/reverse-geocode`
+Base endpoint URL: #### Delete #### :  `localhost:8000/reverse-geocode`
 
 ###### Parameters
 
