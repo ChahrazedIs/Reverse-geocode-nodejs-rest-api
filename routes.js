@@ -2,10 +2,9 @@ var express = require('express');
 var router = express.Router();
 
 const axios = require('axios');
-const GoogleMapsAPIKey = 'AIzaSyAwdL3NcmUdlVCfmtUgvklrSTW4ZrFRLfQ';
-
-
 const { Result } = require('./models/Result');
+const consts = require('./consts');
+
 const mongoose = require('mongoose');
 
 
@@ -17,7 +16,7 @@ const mongoose = require('mongoose');
 router.get('/reverse-geocode', (req, res) => {
 
     if ((lat = req.query.lat) && (lng = req.query.lng)) {
-        axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${GoogleMapsAPIKey}`)
+        axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${consts.GoogleMapsAPIKey}`)
             .then(response => {
                 var status = response.data.status;
                 if (status === "OK") {

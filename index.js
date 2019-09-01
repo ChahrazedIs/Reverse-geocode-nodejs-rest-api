@@ -4,7 +4,7 @@ const port = process.env.PORT || 8000;
 var bodyParser = require('body-parser');
 
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb://localhost/gmaps-geocode'
+const consts = require('./consts');
 var routes = require('./routes.js');
 
 
@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //=================================================
 //        Mongoose Connection
 //=================================================
-mongoose.connect(mongoURI , {
+mongoose.connect(consts.mongoURI , {
     useNewUrlParser: true
 })
 .then(()=>{
