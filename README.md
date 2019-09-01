@@ -1,7 +1,13 @@
 # Reverse geocode Rest API
 
-The API only returns the most precise address for the specified coordiantes
+The API only returns the most precise address for the specified coordiantes.
+In order for this to work please use your google maps API KEY in `consts.js`;
+``` sh
+### Replace API_KEY with a proper key
 
+ const GoogleMapsAPIKey = 'API_KEY';
+
+```
 ### To Run the API
 
 ``` sh
