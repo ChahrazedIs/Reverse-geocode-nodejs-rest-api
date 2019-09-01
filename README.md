@@ -1,4 +1,4 @@
-# YA TECHNOLOGIES BACKEND CHALLENGE : Reverse geocode Rest API
+# Reverse geocode Rest API
 
 The API only returns the most precise address for the specified coordiantes
 
@@ -13,26 +13,26 @@ npm start
 
 ### AVAILABLE ENDPOINTS
 
-1. Reverse Geocode coordinates
+#### 1. Reverse Geocode coordinates
 
-Base endpoint URL: GET : localhost:8000/reverse-geocode
+Base endpoint URL: GET : `localhost:8000/reverse-geocode`
 
-##### Parameters
+###### Parameters
 
 * `lat` - Latitude (mondatory)
 * `lng` - Longitude (mondatory)
 
 
-2. Get all results
+#### 2. Get all results
 
-   Endpoint URL:GET : localhost:8000/results
+   Endpoint URL:GET : `localhost:8000/results`
 
 
-3. Find results by ID or place_id
+#### 3. Find results by ID or place_id
 
-Base endpoint URL: GET :  localhost:8000/reverse-geocode
+Base endpoint URL: GET :  `localhost:8000/reverse-geocode`
 
-##### Parameters
+###### Parameters
 
 * `ID` - Find by ID 
 * `place_id` - Find by Place ID 
@@ -41,11 +41,11 @@ If no parameter (ID or place_id) is specified, the API retruns all available res
 
 
 
-4. Delete results by ID or place_id
+#### 4. Delete results by ID or place_id
 
-Base endpoint URL: Delete :  localhost:8000/reverse-geocode
+Base endpoint URL: Delete :  `localhost:8000/reverse-geocode`
 
-##### Parameters
+###### Parameters
 
 
 * `ID` - Find by ID 
@@ -56,7 +56,7 @@ Base endpoint URL: Delete :  localhost:8000/reverse-geocode
 
 ```
  {
-     status : status of the request (200, 400 , 404) ,
+     status : status of the request {200, 400 , 404 , 500 ...} ,
      results : if the request is successeful , 
      error : if there are errors
  }
